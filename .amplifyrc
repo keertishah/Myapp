@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "mclinical-20181018093941-authRole",
+            "UnauthRoleArn": "arn:aws:iam::959861384820:role/mclinical-20181018093941-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::959861384820:role/mclinical-20181018093941-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "mclinical-20181018093941-deployment",
+            "UnauthRoleName": "mclinical-20181018093941-unauthRole",
+            "StackName": "mclinical-20181018093941",
+            "StackId": "arn:aws:cloudformation:us-west-2:959861384820:stack/mclinical-20181018093941/69e6b2a0-d2f4-11e8-a31a-06142c801c66"
+        }
+    }
+}

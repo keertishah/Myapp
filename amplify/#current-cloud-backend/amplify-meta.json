@@ -1,0 +1,93 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "mclinical-20181018093941-authRole",
+			"UnauthRoleArn": "arn:aws:iam::959861384820:role/mclinical-20181018093941-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::959861384820:role/mclinical-20181018093941-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "mclinical-20181018093941-deployment",
+			"UnauthRoleName": "mclinical-20181018093941-unauthRole",
+			"StackName": "mclinical-20181018093941",
+			"StackId": "arn:aws:cloudformation:us-west-2:959861384820:stack/mclinical-20181018093941/69e6b2a0-d2f4-11e8-a31a-06142c801c66"
+		}
+	},
+	"auth": {
+		"mclinicalusers": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mclinical-20181018093941-deployment/amplify-cfn-templates/auth/mclinicalusers-cloudformation-template.yml",
+				"logicalId": "authmclinicalusers"
+			},
+			"lastPushTimeStamp": "2018-10-18T18:28:48.914Z",
+			"output": {
+				"AppClientSecret": "oubjv43ggr53tgsiag2d8cmq8bfcdftclbhqvb47hm5fu4v5j9v",
+				"UserPoolId": "us-west-2_HSNXCoZyL",
+				"AppClientIDWeb": "6qb152bgmcda8o2qevdsdid2ju",
+				"AppClientID": "5kgru85mba50so3c0h0c07fm0s",
+				"IdentityPoolId": "us-west-2:0eec694c-d342-414c-b013-f4287be80b3d",
+				"IdentityPoolName": "mclinicalusers",
+				"UserPoolName": "mclinicalusers"
+			},
+			"lastPushDirHash": "tENPDh6xPPVAIrMyhbPEj6hRJKM="
+		}
+	},
+	"storage": {
+		"imageuploads": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mclinical-20181018093941-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storageimageuploads"
+			},
+			"lastPushTimeStamp": "2018-10-18T18:28:48.926Z",
+			"output": {
+				"BucketName": "imageuploads-mclinical-salaunch",
+				"Region": "us-west-2"
+			},
+			"lastPushDirHash": "SWm0WkvzQK3g9yFq3KytdaPBw9k="
+		}
+	},
+	"function": {
+		"medicalprocessing": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2018-10-18T16:51:06.283Z",
+			"lastPackageTimeStamp": "2018-10-18T16:51:07.193Z",
+			"distZipFilename": "medicalprocessing-1539881466-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mclinical-20181018093941-deployment/amplify-cfn-templates/function/medicalprocessing-cloudformation-template.json",
+				"logicalId": "functionmedicalprocessing"
+			},
+			"lastPushTimeStamp": "2018-10-18T18:28:48.917Z",
+			"output": {
+				"Region": "us-west-2",
+				"Arn": "arn:aws:lambda:us-west-2:959861384820:function:medicalprocessing",
+				"Name": "medicalprocessing"
+			},
+			"lastPushDirHash": "J7PDm6uwslhVmuynLhHExXrLnHY="
+		},
+		"savedata": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2018-10-18T16:51:07.105Z",
+			"lastPackageTimeStamp": "2018-10-18T16:51:07.148Z",
+			"distZipFilename": "savedata-1539881467-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mclinical-20181018093941-deployment/amplify-cfn-templates/function/savedata-cloudformation-template.json",
+				"logicalId": "functionsavedata"
+			},
+			"lastPushTimeStamp": "2018-10-18T18:28:48.918Z",
+			"output": {
+				"Region": "us-west-2",
+				"Arn": "arn:aws:lambda:us-west-2:959861384820:function:savedata",
+				"Name": "savedata"
+			},
+			"lastPushDirHash": "f/K/iglJVniOmQHp60q8yvs29HE="
+		}
+	}
+}

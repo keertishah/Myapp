@@ -1,0 +1,9 @@
+{
+    "bucketName": "imageuploads-mclinical-salaunch",
+    "authPolicyName": "s3_amplify_4dfe1cc4",
+    "unauthPolicyName": "s3_amplify_4dfe1cc4",
+    "authRoleName": "mclinical-20181018093941-authRole",
+    "unauthRoleName": "mclinical-20181018093941-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "rw"
+}
